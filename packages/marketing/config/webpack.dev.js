@@ -6,10 +6,13 @@ const packageJson = require("../package.json");
 
 const devConfig = {
   mode: "development",
+  output:{
+    publicPath:'http://localhost:7071/'
+  },
   devServer: {
     port: 7071,
     historyApiFallback: {
-      index: "index.html",
+      index: "/index.html",
     },
   },
   plugins: [
